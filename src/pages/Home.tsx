@@ -1,23 +1,15 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
+import Header from '../components/Header/Header';
+
 const Home: React.FC = () => {
+  const usr = localStorage.getItem("USUARIO");
+  const img_usr = localStorage.getItem("IMG_USR");
+  
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
-      </IonContent>
+      <Header title={usr!.toString()} img_usr={img_usr!.toString()} dash={true} />
     </IonPage>
   );
 };
