@@ -1,0 +1,7 @@
+{
+  "name": "perfil-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
