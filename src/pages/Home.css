@@ -1,0 +1,20 @@
+.homeRow {
+    position: relative;
+    margin-top:-6%;
+    background: transparent;
+}
+
+.titleHome {
+    color: #262E42;
+    font-weight: bold;
+    background: transparent;
+
+}
+
+.contentHome {
+    color: #262E42;
+    font-style: italic;
+    font-weight: lighter;
+    font-family: Lato, sans-serif;
+    background: transparent;
+}
