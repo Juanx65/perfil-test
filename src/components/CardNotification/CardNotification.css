@@ -1,0 +1,17 @@
+.logoBox{
+    display: flex;
+    margin: auto;
+}
+.card-option {
+    width: 100%;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card-icon-option {
+    position: relative;
+    width: 25px;
+    height: 25px;
+}

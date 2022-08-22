@@ -1,5 +1,5 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { IonApp, IonButton, IonContent, IonPage, IonRouterOutlet, setupIonicReact, useIonRouter } from '@ionic/react';
+import { IonApp, IonButton, IonContent, IonPage, IonRouterOutlet, IonSplitPane, setupIonicReact, useIonRouter } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 import Home from './pages/Home';
@@ -25,6 +25,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Menu from './components/Menu/Menu';
 
 setupIonicReact();
 
@@ -35,10 +36,17 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <IonPage>
-      <IonReactRouter>
-          <Route exact path="/" component={Login}/>
-          <Route exact path="/home" component={Home}/>
-      </IonReactRouter>
+        <IonReactRouter>
+          <Switch>
+            <Route exact path="/" component={Login}></Route>
+            <IonSplitPane contentId='main'>
+              <Menu />
+              <IonRouterOutlet id='main'>
+                <Route exact path="/home" component={Home} />
+              </IonRouterOutlet>
+            </IonSplitPane>
+          </Switch>
+        </IonReactRouter>
       </IonPage>
     </IonApp>
   );

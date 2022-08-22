@@ -21,7 +21,6 @@ export class Header extends React.Component<HeaderProps> {
     }
 
     render() {
-
         return (
             <>
                 <IonHeader  class="ion-no-border">
