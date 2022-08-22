@@ -7,7 +7,11 @@ import { IconContext } from "react-icons/lib/cjs/iconContext";
 
 import './CardNotification.css';
 
-export const CardNotification: React.FC = () => {
+interface ModalProps {
+    texto: any;
+  }
+
+export const CardNotification: React.FC<ModalProps> = ({texto}) => {
     const goToSignDocuments = (e: any) => {
         alert("anda a firmar")
         navigation.push("/app", "root", "replace");
@@ -18,7 +22,7 @@ export const CardNotification: React.FC = () => {
         <IonCard onClick={e => goToSignDocuments(e)} class="card-option">
             <IonCardHeader class='card-text'>
                 <div className="logoBox">
-                    Tienes 9 documentos por firmar
+                    {texto}
                     <FaPenNib className="card-icon-option" />
                 </div>
             </IonCardHeader>

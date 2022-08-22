@@ -1,6 +1,6 @@
 .homeRow {
     position: relative;
-    margin-top:-6%;
+    margin-top: -6%;
     background: transparent;
 }
 
@@ -18,3 +18,24 @@
     font-family: Lato, sans-serif;
     background: transparent;
 }
+
+.boxHeader {
+    margin-top: 5%;
+    width: 95%;
+    left: 1%;
+    right: 5%;
+}
+
+strong {
+    color: #262E42;
+}
+
+.card-option {
+    width: 90%;
+    height: 5%;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+

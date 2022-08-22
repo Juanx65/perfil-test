@@ -4,21 +4,16 @@ import React, { lazy } from "react";
 
 import './Modals.css';
 
-const data = [
+interface ModalProps {
+  data: any;
+}
 
-  { title: "Nombre", content: "Juan Aguilera" },
-  { title: "Tipo", content: "Simple" },
-  { title: "Vinculo", content: "Hermano(a)" },
-  { title: "Monto", content: "200.000" }
-
-]
-
-const GrayBox = () => {
+const GrayBox: React.FC<ModalProps> = ({data}) => {
 
   return (
 
     <div className='Box' >
-      {data.map(key => (
+      {data.map((key: { title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; content: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => (
         <IonRow>
           <IonCol>
             <IonItem lines='none' className='title'>{key.title}</IonItem>
@@ -29,11 +24,7 @@ const GrayBox = () => {
         </IonRow>
 
       ))}
-
     </div>
-
-
-
 
   );
 };
