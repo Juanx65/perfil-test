@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ dismiss, data }) => {
                             <IonRow>
                                 <IonCol><div><IonLabel class="textModalStrong"> <strong> {data.title} </strong> </IonLabel></div></IonCol>
                                 <IonCol><div className="inputDivModal">
-                                    {data.editable ? <IonInput class="textModal">{data.content}</IonInput> : <IonLabel class="textModal">{data.content}</IonLabel>}
+                                    {data.editable ? <IonInput class="textModal" value={data.content}></IonInput> : <IonLabel class="textModal">{data.content}</IonLabel>}
                                 </div></IonCol>
                             </IonRow>
                         </IonGrid>

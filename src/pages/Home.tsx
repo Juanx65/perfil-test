@@ -1,4 +1,4 @@
-import { IonCard, IonCardHeader, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { IonCard, IonCardHeader, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonPage, IonRow, IonTitle, IonToolbar, useIonModal } from '@ionic/react';
 import './Home.css';
 
 import { personOutline, personSharp, cashOutline, cashSharp, medkitSharp, peopleSharp } from 'ionicons/icons';
@@ -89,8 +89,8 @@ const contrato = [
 ]
 const portal = [
 
-  { title: "Usuario", content: "13473990-3" },
-  { title: "Contraseña", content: "****" }
+  { title: "Usuario", content: "13473990-3", editable: "true"},
+  { title: "Contraseña", content: "****", editable: "true" }
 
 
 ]
@@ -120,9 +120,8 @@ const Home: React.FC = () => {
           </IonRow>
         </IonGrid>
 
-
         <IonItem className='boxHeader'><strong>Información Personal</strong><IonIcon slot='end' md={personSharp} ios={personSharp} /></IonItem>
-        <GrayBox Modal={Modal} editable={true} data={informacion_personal} />
+        <GrayBox editable={true} data={informacion_personal} />
 
         <IonItem className='boxHeader'><strong>Pago</strong><IonIcon slot='end' md={cashOutline} ios={cashOutline} /></IonItem>
         <GrayBox data={pago} />
@@ -144,10 +143,10 @@ const Home: React.FC = () => {
           <IonCardHeader>
             <IonRow>
               <IonCol>
-                <IonItem lines='none' >Monto Total:</IonItem>
+                <IonItem  className="card-item-option" lines='none' >Monto Total:</IonItem>
               </IonCol>
               <IonCol>
-                <IonItem lines='none'>$450.000</IonItem>
+                <IonItem  className="card-item-option" lines='none'>$450.000</IonItem>
               </IonCol>
             </IonRow>
           </IonCardHeader>
@@ -157,7 +156,7 @@ const Home: React.FC = () => {
         <GrayBox data={contrato} />
 
         <IonItem className='boxHeader'><strong>Portal Empleado</strong><IonIcon slot='end' md={peopleSharp} ios={peopleSharp} /></IonItem>
-        <GrayBox data={portal} />
+        <GrayBox editable={true} data={portal} />
 
         <IonItem className='boxHeader'><strong>Firma</strong><IonIcon slot='end' md={peopleSharp} ios={peopleSharp} /></IonItem>
         <GrayBox data={firma} />

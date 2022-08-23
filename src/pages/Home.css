@@ -39,8 +39,13 @@ strong {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
+
 }
 
+.card-item-option {
+    position: absolute;
+    top: -180%;
+}
 .algo {
     height: 5%;
 

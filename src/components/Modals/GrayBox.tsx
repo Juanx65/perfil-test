@@ -4,29 +4,30 @@ import { eyeSharp, createSharp } from 'ionicons/icons';
 
 import React, { lazy } from "react";
 
+import Modal from './Modal';
+
 import './GrayBox.css';
 
-interface ModalProps {
+
+interface GrayProps {
   data: any;
   editable?: boolean;
-  Modal?: () => void;
 
 }
 
+const GrayBox: React.FC<GrayProps> = ({ data, editable }) => {
 
-
-const GrayBox: React.FC<ModalProps> = ({ data, editable, Modal }) => {
 
   const [present, dismiss] = useIonModal(Modal, {
     dismiss: () => dismiss(),
     data: data,
     id: "example-modal",
     trigger: "open-modal",
-});
+  });
 
-const modalOptions = {
+  const modalOptions = {
     onDidDismiss: () => dismiss(),
-};
+  };
 
   return (
 
@@ -42,8 +43,8 @@ const modalOptions = {
         </IonRow>
       ))}
 
-      {editable ? <IonIcon onClick={() => { present(modalOptions) }} className="IconGray" color='#262E42' md={createSharp}ios={createSharp}/>:<></>}
-      
+      {editable ? <IonIcon onClick={() => { present(modalOptions) }} className="IconGray" color='#262E42' md={createSharp} ios={createSharp} /> : <></>}
+
     </div>
 
   );
