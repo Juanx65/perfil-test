@@ -6,6 +6,7 @@ import { personOutline, personSharp, cashOutline, cashSharp, medkitSharp, people
 import Header from '../components/Header/Header';
 import GrayBox from '../components/Modals/GrayBox';
 import CardNotification from '../components/CardNotification/CardNotification';
+import Modal from '../components/Modals/Modal';
 
 const informacion_personal = [
 
@@ -15,7 +16,7 @@ const informacion_personal = [
   { title: "Sexo", content: "Masculino" },
   { title: "Dirección", content: "Javiera Carrera 522" },
   { title: "Comuna", content: "Copiapó" },
-  { title: "Provincia", content: "Copispó" },
+  { title: "Provincia", content: "Copiapó" },
   { title: "Teléfono", content: "+569 8 6358145" }
 
 ]
@@ -31,9 +32,9 @@ const pago = [
 const prevision = [
 
   { title: "Regimen Previsional", content: "AFP" },
-  { title: "Tipo de Gratificación", content: "Articulo 50" },
-  { title: "Cotiza Seguro de Cesantía", content: "Sí" },
-  { title: "Descuento Zona Extrema", content: "No" }
+  { title: "Tipo Gratificación", content: "Articulo 50" },
+  { title: "Seguro Cesantía", content: "Sí" },
+  { title: "Zona Extrema", content: "No" }
 
 ]
 
@@ -51,7 +52,7 @@ const regimen_salud = [
 
   { title: "Tipo", content: "Fonasa/Isapre" },
   { title: "% a cotizar", content: "7" },
-  { title: "Tipo", content: "Caja de Compensación (CCAF)" },
+  { title: "Caja de Compensación", content: "CCAF" },
   { title: "Caja", content: "Los Andes" }
 
 ]
@@ -84,7 +85,6 @@ const contrato = [
   { title: "Indefinido", content: "Sí" },
   { title: "Fecha Inicio", content: "01-08-2019" },
   { title: "Estado", content: "Aprobado" }
-
 
 ]
 const portal = [
@@ -122,7 +122,7 @@ const Home: React.FC = () => {
 
 
         <IonItem className='boxHeader'><strong>Información Personal</strong><IonIcon slot='end' md={personSharp} ios={personSharp} /></IonItem>
-        <GrayBox data={informacion_personal} />
+        <GrayBox Modal={Modal} editable={true} data={informacion_personal} />
 
         <IonItem className='boxHeader'><strong>Pago</strong><IonIcon slot='end' md={cashOutline} ios={cashOutline} /></IonItem>
         <GrayBox data={pago} />
@@ -144,10 +144,10 @@ const Home: React.FC = () => {
           <IonCardHeader>
             <IonRow>
               <IonCol>
-                <IonItem lines='none' className='title'>Monto Total:</IonItem>
+                <IonItem lines='none' >Monto Total:</IonItem>
               </IonCol>
               <IonCol>
-                <IonItem lines='none' className="content">$450.000</IonItem>
+                <IonItem lines='none'>$450.000</IonItem>
               </IonCol>
             </IonRow>
           </IonCardHeader>

@@ -1,13 +1,14 @@
 .homeRow {
     position: relative;
-    margin-top: -6%;
+    margin-top: -25px;
     background: transparent;
+    height: fit-content;
 }
 
 .titleHome {
     color: #262E42;
     font-weight: bold;
-    background: transparent;
+    --ion-item-background: transparent;
 
 }
 
@@ -17,6 +18,7 @@
     font-weight: lighter;
     font-family: Lato, sans-serif;
     background: transparent;
+    --ion-item-background: transparent;
 }
 
 .boxHeader {
@@ -32,10 +34,17 @@ strong {
 
 .card-option {
     width: 90%;
+
+    height: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.algo {
     height: 5%;
 
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
 }
-
